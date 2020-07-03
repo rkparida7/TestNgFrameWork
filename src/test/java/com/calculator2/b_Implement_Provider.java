@@ -24,19 +24,19 @@ public class b_Implement_Provider {
  
     @Test(dataProvider = "addMethodDataProvider")
     public void testAddMethod(int a, int b, int result) {
-    	a_Implement_TestNG calculator = new a_Implement_TestNG();
-        Assert.assertEquals(calculator.Addition(a, b), result);
+    	c_Calculator cal = new c_Calculator();
+        Assert.assertEquals(cal.add(a, b), result);
     }
     @Test(dataProvider = "subtractMethodDataProvider")
     public void testSubtractMethod(int a, int b, int expectedResult) {
-    	a_Implement_TestNG calculator = new a_Implement_TestNG();
-        Assert.assertEquals(calculator.Substraction(a, b), expectedResult);
+    	c_Calculator cal = new c_Calculator();
+    	Assert.assertEquals(cal.sub(a, b), expectedResult);
     }
  
     @Test(dataProvider = "multiplyMethodDataProvider")
     public void testMultiplyMethod(int a, int b, int expectedResult) {
-    	a_Implement_TestNG calculator = new a_Implement_TestNG();
-        Assert.assertEquals(calculator.Multipication(a, b), expectedResult);
+    	c_Calculator cal = new c_Calculator();
+    	Assert.assertEquals(cal.mul(a, b), expectedResult);
     }
  
 }
